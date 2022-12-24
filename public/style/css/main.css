@@ -1,0 +1,88 @@
+@font-face{
+    font-family: 'Manford sans';
+    src: url('../font/ManfordSans.ttf');
+}
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F9FCFD;
+}
+
+header{
+    background-color: #F3FAFB;
+    height: 130px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header figure img.logo {
+    height: 70px;
+}
+
+section.secForm{
+    max-width: 65%;
+}
+nav.menu ul {    
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+nav.menu ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+nav.menu ul li a {
+    color: #ACDCE4;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Manford sans';
+    transition: all .6s;
+}
+
+nav.menu ul li:hover a {
+    color: #54B6C8;
+}
+
+nav.menu ul li:hover div.line {
+    height: 2px;
+    width: 30px;
+    background-color: #54B6C8;
+}
+
+div.line{
+    height: 0;
+    width: 0;
+    transition: all .6s;
+    background-color: #54B6C8;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    width: 20%;
+    height: calc(100vh - 130px);
+}
+aside nav.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 160px);
+    position: fixed;
+}
