@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@font-face {
+    font-family: 'beatrice';
+    src: url(../fonts/BeatriceDisplay.ttf);
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    
+    /* CSS HEX */
+    /* --mint-cream: #d8e7e0ff; */
+    --jungle-green: #46a07aff;
+    --cadmium-green: #026b3fff;
+    --dark-green: #012e1bff;
+    --black-coffee: #3a2e39ff;
+    --fundo: #FAFFFD;
+    /* CSS HEX */
+    --mint-cream: #ECF5F3ff;
+    --aero-blue: #C9EFE0ff;
+    --op-aero-blue: rgba(255, 255, 255, 0.493);
+    --mp-aero-blue: rgba(255, 255, 255, 0);
+    --emerald: #00cc777d;
+    --op-emerald: rgba(0, 204, 119, 0.479);
+
+    --british-racing-green: #13442Eff;
+    font-family: 'Urbanist', sans-serif;
+}
+main{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+}
+
+.content {
+    display: grid;
+    width: 900px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--op-aero-blue);
+    color: var(--cadmium-green);
+    border: 1.5px solid var(--op-aero-blue);
+    backdrop-filter: blur(10px);    
+    box-shadow: 10px 10px 20px rgba(133, 133, 133, 0.2);
+}
+
+.tabela{
+    margin-top: 30px;
+}
+
+.tabela a{
+    text-decoration: none;
+    color: var(--cadmium-green);
+    font-weight: 300;
+    position: relative;
+}
+
+.tabela a:hover{
+    color: var(--cadmium-green);
+}
+
+.tabela a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cadmium-green);
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+  
+.tabela a:hover::before {
+    transform: scaleX(1);
+}
+  
+
+td{
+    padding-bottom: 6px;
+}
+
+td.um{
+    width: 35%;
+}
+
+main .content h1{
+    font-size: 5rem;
+}
+
+main .content p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+
+.sugest{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--cadmium-green);
+    width: 80%;
+}
+
+.sugest div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+}
+
+.sugest h3{
+    font-size: 2rem;
+}
+
+.sugest a{
+    font-size: 3rem;
+    text-decoration: none;
+    color: var(--cadmium-green);
+}
+
+.sugest img {
+    width: auto;
+    height: auto;
+    max-width: 400px;
+}
+.sugest figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sugest #chatBtn{
+    border-radius: 25px;
+    background-color: var(--cadmium-green);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.sugest #chatBtn:hover{
+    background-color: var(--jungle-green);
+}
+
+.sugest #chatBtn a{
+    font-size: 2.5rem;
+    color: var(--aero-blue);
+}
+
+
+.faq{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+ .faq .faqCard{ 
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    background-color: var(--op-aero-blue);
+    border: 1.5px solid var(--op-aero-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+ }
+
+.faqCard details p{
+    text-align: left;
+    margin-top: 20px;
+    color: var(--cadmium-green);
+    font-size: 16px;
+}
+
+
+.faqCard summary{
+    text-decoration: none;
+    list-style-type: '';
+    cursor: pointer;
+    color: var(--cadmium-green);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+i{
+    transition: all .6s;
+}
+
+details[open] p{
+    transition: teste .6s ;
+}
+
+details[open] i{
+    transform: rotate(180deg);
+    
+}
+
+/* summary:before {
+    content: "\2714"; /* the new icon 
+    color: #696f7c;
+    margin-right: 5px;
+} */
+
+
+@media (max-width: 1190px){
+    .sugest{
+        display: flex;
+        flex-direction: column-reverse;
+        /* gap: 80px; */
+    }
+
+    .sugest img {
+        width: auto;
+        height: auto;
+        max-width: 40%;
+    }
+
+    .sugest div h3{
+        font-size: 1rem;
+    }
+
+    .sugest div a{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 950px){
+    .content{
+        width: 90%;
+    }
+
+    main{
+        gap: 80px;
+    }
+}
+
+@media (max-width: 470px){
+    main .content h1{
+        font-size: 3.5rem;
+    }
+
+    main .content p{
+        font-size: 12px;
+    }
+
+    td{
+        font-size: 10px;
+    }
+}

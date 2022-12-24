@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/responsive-menu.css">
+    <link rel="stylesheet" href="resources/css/reserva-pontos.css">
+    <link rel="stylesheet" href="resources/css/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="resources/img-main/isologo.svg" type="image/x-icon">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Reserva de Pontos | OtoLugar</title>
+</head>
+
+<body onload="verifyAuth()">
+
+    <script src="resources/js/app.js"></script>
+  
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img class="isotipo" src="resources/img-main/logo.svg" alt="">
+                </a>
+            </div>
+
+            <div class="navmenu">
+                <div class="mobile-auth"></div>
+                <button id="btn-mobile"><i class='bx bx-menu active' ></i><i class='bx bx-x'></i></button>
+                <ul class="list">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="pesquisa.html">Pesquisar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    
+                </ul>
+            </div>
+
+
+            <div class="sign" id="sign">
+                <!-- verifyAuth -->
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <h1 class="title">Reserva de Pontos</h1>
+        <div class="row">
+            <div class="inputbox">
+                <input type="text" id="local" required placeholder="ex: Praia do Cabo Branco">
+                <label for="local"> Nome do Ponto Turistico:</label>
+            </div>
+
+            <div class="inputbox">
+                <input type="text" onblur="(this.type='text')" onfocus="(this.type='date')" id="data" required>
+                <label for="data"> Data da Reserva:</label>
+            </div>
+
+            <div class="inputbox">
+                <input type="text" onblur="(this.type='text')" onfocus="(this.type='time')" id="horario" placeholder="aaaa" required>
+                <label for="horario"> Horário previsto: </label>
+            </div>
+
+            <div class="inputbox">
+                <input type="text" id="cpf" placeholder="XXX.XXX.XXX-XX" required>
+                <label for="cpf"> CPF: </label>
+            </div>
+
+            <div class="inputbox">
+                <input type="tel" id="tel" placeholder="(XX) XXXXX-XXXX" required>
+                <label for="tel"> Telefone para contato: </label>
+            </div>
+
+            <div class="inputbox">
+                <input type="email" id="email" placeholder="ex: nick@gmail.com" required>
+                <label for="email"> Email para contato: </label>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="info-ad" placeholder="Qualquer observação que julgar necessária." required>
+                <label for="info-ad"> Informações adicionais: </label>
+            </div>
+
+        </div>
+        <div class="row">
+            <button>Reservar</button>
+        </div>
+
+    </main>
+</body>
+
+<script src="resources/js/menu.js"></script>
+<script>
+  if(!(userIsAuth()) ){
+          window.location.href = '/signinup.html'
+        }
+</script>
+
+
+</html>

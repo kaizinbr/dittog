@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/responsive-menu.css">
+    <link rel="stylesheet" href="resources/css/perfil.css">
+    <link rel="stylesheet" href="resources/css/main.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="resources/img-main/isologo.svg" type="image/x-icon">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="resources/js/app.js"></script>
+    <title>Meu Perfil | OtoLugar</title>
+</head>
+<body onload="canEdit()">
+   
+    <header>
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <img class="isotipo" src="resources/img-main/logo.svg" alt="">
+            </a>
+        </div>
+
+        <div class="navmenu">
+            <div class="mobile-auth"></div>
+            <button id="btn-mobile"><i class='bx bx-menu active' ></i><i class='bx bx-x'></i></button>
+            <ul class="list">
+                <li><a href="/">Home</a></li>
+                <li><a href="pesquisa.html">Pesquisar</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                
+            </ul>
+        </div>
+
+
+        <div class="sign" id="sign">
+            <!-- verifyAuth -->
+        </div>
+    </nav>
+    </header>
+    
+  <section class="secaoPerfil">
+        <div class="perfil-usuario">
+            <h1 class= meu-perfil>Meu Perfil</h1>
+            <box class="box" >
+                <div class="perfil"> 
+                    <div class="perfil-foto">
+                        <img class="avatar" id="img-preview" src="" alt="avatar">
+                    </div>
+                    <input type="file" accept="image/*"
+											name="foto" id="foto">
+                    <label class="foto" for="foto"><i class='bx bx-image-alt'></i></label>
+                </div>
+                <div class="info " >
+                    <div class="info-media">
+                        <form class="form" id="formulario">
+                            <div class="campo1">
+                               <label class="bio1"><strong class="bio2">Nome</strong></label>
+                                <input id="nome" rows="6" type="text" class="bio3" name="bio3" placeholder="Insira seu nome aqui" required>
+                                <br>
+ 				                                <label class="bio1"><strong class="bio2">Biografia</strong></label>
+                                <textarea rows="6" type="text"  class="bio3" name="bio3" id="bio" placeholder="Insira informações sobre você aqui"></textarea>
+                                <br>
+                                <label class="bio1"><strong class="bio2">Email</strong></label>
+                                <input id="email" rows="6" type="email" class="bio3" name="email" placeholder="Seu email não será compartilhado com terceiros!" required>
+                                <br>
+                                <label for="bio1"><strong class="bio2">Telefone</strong></label>
+                                <input id="telefone" rows="6" type="tel" class="bio3" name="tel" placeholder="Ex.: 83 912345678">
+                                <br>
+                                <label for="bio1"><strong class="bio2">Data de Nascimento</strong></label>
+                                <input id="data_nascimento" rows="6" type="date" class="bio3" name="datan1" placeholder="Ex.: 21/10/2000">
+                                <br>
+                                <label for="sexo"><strong class="gener3">Gênero</strong></label>
+                                <select id="sexo" class="gener2">
+                                    <option selected disabled value="">Selecione como você se identifica</option>
+                                    <option value="masc">Masculino</option>
+                                    <option value="fem">Feminino</option>
+                                    <option value="nb">Não-Binárie</option>
+                                </select>
+                            </div>
+                            <div class="campo2">
+                                <button class="button-edit-dados" onclick="canEdit(), changeEditBtn()" type="submit">Editar</button>
+                                <button class="button-dados" onclick="changeDataUser()" type="submit">Alterar dados</button>
+                            </div>
+                            
+        <!-- (Ou para o botão) input type="submit" class=button-dados value="Alterar dados" /> -->
+                        </form>
+                    </div>
+                </form>
+                </div>
+            </box>
+        </div>
+    </section>
+        <!-- (Ou para o botão) input type="submit" class=button-dados value="Alterar dados" /> -->
+                    </div>
+                </div>
+            </box>
+        </div>
+    </section>
+  </form>
+  
+   
+    <script src="resources/js/menu.js"></script>
+    <script>
+				let newImgPerfil;
+				verifyAuth()
+        if(!(userIsAuth())) {
+          window.location.href = '/signinup.html'
+        } else {
+          loadInfos()
+        }
+			// https://stackoverflow.com/questions/11511511/how-to-save-a-png-image-server-side-from-a-base64-data-uri
+			function readImage() {				
+    if (this.files && this.files[0]) {
+        var file = new FileReader();
+        file.onload = function(e) {
+            document.getElementById("img-preview").src = e.target.result;
+					newImgPerfil = e.target.result;
+        };       
+        file.readAsDataURL(this.files[0]);
+    }
+}
+document.getElementById("foto").addEventListener("change", readImage, false);
+			
+      function stopDefAction(evt) {
+            evt.preventDefault();
+      }
+
+document.getElementById('formulario').addEventListener(
+            'submit', stopDefAction, false
+        );
+      
+      async function loadInfos() {
+      const imagemInput = document.getElementById('img-preview')
+      const nomeInput = document.getElementById('nome')
+      const emailInput = document.getElementById('email')
+      const telefoneInput = document.getElementById('telefone')
+      const dataNascimentoInput = document.getElementById('data_nascimento')
+      const sexoInput = document.getElementById('sexo')
+      const bioInput = document.getElementById('bio')
+        
+      const url = `/get-user/id/${window.sessionStorage.getItem('user_id')}`;
+
+      
+
+      const user = (await (await fetch(url)).json())[0];
+				
+        
+      imagemInput.src = user.foto_perfil ? user.foto_perfil : "/resources/img-main/profile_picture.svg" 
+      nomeInput.value = user.nome
+      emailInput.value = user.email
+      telefoneInput.value = user.telefone
+      sexoInput.value = user.sexo
+      dataNascimentoInput.value = user.data_nascimento
+      bioInput.value = user.bio
+      
+      }
+
+      async function changeDataUser() {
+        const nomeInput = document.getElementById('nome').value
+        const emailInput = document.getElementById('email').value
+        const bioInput = document.getElementById('bio').value
+        const dataNascInput = document.getElementById('data_nascimento').value
+        const telInput = document.getElementById('telefone').value
+        const sexoInput = document.getElementById('sexo').value
+        const urlUser = `/get-user/id/${window.sessionStorage.getItem('user_id')}`;
+        
+				const user = (await (await fetch(urlUser)).json())[0]
+        const user_id = user.id;
+
+
+        const dataChanged = {
+          "id": user_id,
+          "nome": nomeInput,
+          "telefone": telInput,
+					"foto_perfil": (newImgPerfil) ? newImgPerfil : user.foto_perfil,
+          "data_nascimento": dataNascInput,
+          "bio": bioInput,
+          "sexo": sexoInput,
+          "email": emailInput
+        };
+
+
+          const url = '/change-user';
+
+          await fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(dataChanged),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+        
+        }
+
+
+        // FUNÇÃO PRA TRANSFORMAR HABILITAR E DESATIVAR A EDIÇÃO
+        function canEdit(){           
+
+            const info = document.querySelector('.info');
+            const nomeInput = document.getElementById('nome');
+            const emailInput = document.getElementById('email');
+            const telefoneInput = document.getElementById('telefone');
+            const dataNascimentoInput = document.getElementById('data_nascimento');
+            const sexoInput = document.getElementById('sexo');
+            const bioInput = document.getElementById('bio');
+
+            info.classList.toggle('cant-edit');
+
+            const userData = {nomeInput, emailInput, telefoneInput, dataNascimentoInput, sexoInput, bioInput};
+
+            if(info.classList.contains('cant-edit')){
+                      for (let data in userData) {
+                        userData[data].disabled = true;
+                      
+                  }
+                }
+                else{
+                  for (let data in userData) {
+                      userData[data].removeAttribute('disabled')
+                  }
+                }
+        }
+
+        function changeEditBtn(){
+
+          const info = document.querySelector('.info');
+
+          const editButton = document.querySelector('.button-edit-dados');
+
+            if(editButton.textContent == 'Editar'){
+              editButton.textContent = 'Cancelar';
+            }
+            else if(editButton.textContent == 'Cancelar'){
+              loadInfos();
+              editButton.textContent = 'Editar';
+            }
+        }
+    </script>
+    
+</body>
+</html>
