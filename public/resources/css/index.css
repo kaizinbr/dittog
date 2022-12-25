@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'Modernist';
+    src: url(../fonts/Sk-Modernist-Regular.otf);
+}
+* {
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    --cultured: #f0f0f0ff;
+    --gainsboro: #dde5e5ff;
+    --light-gray: #c6d3d3ff;
+    --steel-teal: #648181ff;
+    --eerie-black: #252525ff;
+    --op-eerie-black: rgba(54, 54, 54, 0.5);
+    color: var(--light-gray);
+
+    /* FONTES: https://coolors.co/f0f0f0-dde5e5-f3fafb-648181-f9fcfd-c6d3d3-252525
+    https://coolors.co/252525
+    https://coolors.co/648181 */
+}
+
+body {
+    background-color: var(--eerie-black);
+}
+
+header{
+    background-color: var(--op-eerie-black);
+    backdrop-filter: blur(10px);
+    height: 70px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+    color: var(--light-gray);
+}
+
+header nav ul li a:hover{
+    color: var(--gainsboro);
+}
+
+header figure img#logo {
+    height: 40px;
+}
+
+
+
+/* CARDS */
+
+/* .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    width: 100vw;
+} */
+
+.container .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*.container .content:first-child{
+    display: block;
+     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+}*/
+
+.card {
+    /* display: flex; */
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+    width: 390px;
+    height: 270px;
+    border-radius: 10px;
+    margin: 20px;
+    transition: all .4s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 20px 60px 0 rgb(0 0 0 / 15%);
+    border: solid 1px rgba(255, 255, 255, 0);
+    
+    /* flex-direction: column;
+    justify-content: flex-start; 
+    background-color: rgb(56, 55, 55);
+    backdrop-filter: blur(10px); 
+    gap: 20px;
+    border: solid 1px var(--steel-teal); */
+}
+
+.card:hover{
+    /* transform: scale(1.05);
+     */
+     border: solid 1px var(--steel-teal);
+}
+
+.card img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card .infos{
+    background-color: var(--op-eerie-black);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 175px;
+    height: 95px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card .game-infos{
+    display: flex;
+    flex-direction: column;
+}
+
+.card .game-infos h2{
+    color: var(--gainsboro);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.card .game-infos .details{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: row;
+}
+
+.card .game-infos .details h3{
+    font-size: .6rem;
+    font-weight: 400;
+    color: var(--light-gray);
+    margin-right: 10px;
+}
+
+.card .button{    
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    height: 40px;
+    width: 75px;
+    margin-right: 10px;
+    transition: all .4s ease-in-out;
+}
+
+.card .button:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.card .button button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.card .button button span{
+    transition: all 0.4s ease-in-out;
+    font-size: 1rem;
+}
+
+.card .button button:hover span{
+    color: var(--cultured);
+}
+
+.card .button button a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+.card .button button a h3{
+    color: rgb(230, 219, 219);
+
+}
+
+
+/* SWIPER */
+.swiper-container {
+    position: relative;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container h1{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    margin-top: -50px;
+    text-align: center;
+    font-size: 18px;
+    width: 430px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    color: var(--steel-teal) !important;
+    margin-top: -70px !important;
+}

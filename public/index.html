@@ -4,10 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="resources/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <title>Index</title>
 </head>
 <body>
-    <h1>TEXTO AQUI</h1>
+
+    <header>
+        <nav>
+            <figure>
+                <img src="resources/img-main/logo.svg" id="logo" alt="DittoG Logo">
+            </figure>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="swiper-container">
+            <h1 class="content-title">Electronic Arts</h1>            
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="swiper-container">
+            <h1 class="content-title">Ubisoft</h1>            
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="swiper-container">
+            <h1 class="content-title">Nintendo</h1>            
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="resources/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+    </script>
+    <script type="module">
+        import Index from './resources/js/index.js';
+
+        const c = console;
+
+        function getTitles() {
+            const titles = document.querySelectorAll('.content-title');
+            c.log(titles);
+            let titulos = [];
+            for (const title of titles) {
+                titulos.push(title.textContent);
+
+                const newClass = title.textContent.replaceAll(' ', '-');
+
+                title.classList.add(newClass);
+            }
+            c.log(titulos);
+
+            for (const titulo of titulos) {
+                Index.putData(titulo);
+            }
+        }
+
+        document.body.onload = getTitles;
+
+        
+
+
+    </script>
+
 </body>
 </html>

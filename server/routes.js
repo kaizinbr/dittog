@@ -51,13 +51,6 @@ router.get('/curriculum-info/id/:id', isAuthenticated, async (req, res) => {
  res.json(response);
 });
 
-router.get('/pdf', (req, res) => {
-  doc.text("Hello world!", 10, 10);
-  doc.textWithLink("aaaaaaaaa");
-  doc.save("a4.pdf");
-
-  res.send(doc);
-});
 
 router.post('/create-user',  
 multer(uploadConfig).single('image'), celebrate({
