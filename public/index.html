@@ -24,6 +24,39 @@
         </nav>
     </header>
 
+    <div class="container banner-container">
+        <div class="swiper banner">
+            <div class="swiper-wrapper banner-wrapper">
+                <!-- <div class="swiper-slide banner-slide">
+                    <div class="card banner-card">
+                        <img src="resources/img/c38bdb5da139005777176d33c463d70f.jpg" alt=""> 
+                        <div class="card-footer">
+                            <div class="card-footer-content">
+                                <div class="major-infos">
+                                    <h2 class="title"> <a href="aa">Genshin</a> </h2>
+                                    <div>
+                                        <h4 class="developer">miHoYo</h4>
+                                        <span> | </span>
+                                        <h4 class="classificacao-esb">Teen </h4>
+                                    </div>
+                                        
+                                </div>
+                                <div class="minor-infos">
+                                    <div class="genres">
+                                        <div class="genre-tag">Ação</div>
+                                        <div class="genre-tag">Aventura</div>
+                                        <div class="genre-tag">RPG</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                             
+                    </div>
+                </div> -->
+            </div>
+            <div class="swiper-pagination"></div>
+            </div>
+    </div>
+
     <div class="container">
 
         <div class="swiper-container">
@@ -47,7 +80,20 @@
         <div class="swiper-container">
             <h1 class="content-title">Nintendo</h1>            
             <div class="swiper mySwiper">
-                <div class="swiper-wrapper"></div>
+                <div class="swiper-wrapper">
+                    
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="swiper-container">
+            <h1 class="content-title">Gameloft</h1>            
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    
+                </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
@@ -55,7 +101,16 @@
 
     </div>
 
+    <!-- <div class="page__art">
+        <div class="art-wrapper" style="height:100%">
+            <div class="art art_secondary" style="height:100%;background-color:transparent;background-image:linear-gradient(to left, rgba(0,0,0,0.7), #151515),url('/assets/images/bioshock-infinite_rgba(0,0,0,0.7).283198f15004af544272faba8557e99f.jpg');z-index:1">
+                <div><img src="resources/img/b11127b9ee3c3701bd15b9af3286d20e.jpg" style="position:absolute;left:-9999px" alt=""/></div>
+            </div>
+        </div>
+    </div> -->
+
     <script src="resources/js/index.js"></script>
+    <script type="module" src="resources/js/banner.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
@@ -63,12 +118,13 @@
     </script>
     <script type="module">
         import Index from './resources/js/index.js';
+        import Banner from './resources/js/banner.js';
 
         const c = console;
 
         function getTitles() {
+            
             const titles = document.querySelectorAll('.content-title');
-            c.log(titles);
             let titulos = [];
             for (const title of titles) {
                 titulos.push(title.textContent);
@@ -84,10 +140,15 @@
             }
         }
 
-        document.body.onload = getTitles;
+        function putBanners() {
+            const bannerContainer = document.querySelector('.swiper-wrapper.banner-wrapper')
+            Banner.getBannerData(bannerContainer);
+            getTitles();
+        }
 
-        
+        document.body.onload = putBanners;
 
+                
 
     </script>
 

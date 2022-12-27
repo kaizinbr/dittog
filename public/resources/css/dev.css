@@ -1,0 +1,41 @@
+div.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dev-title {
+    /* background: linear-gradient(rgb(255, 255, 255, 0.1),rgb(0, 0, 0, 1)), url(../img/1f02774031aac19e2a0a32f5b291dcbe.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 500px; */
+
+    display: flex;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.disabled{
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+}
+
+.games-ctrl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.prev-btn, .next-btn{
+    background: none;
+    border: none;
+    color: rgb(127, 127, 127);
+    cursor: pointer;
+    outline: none;
+}

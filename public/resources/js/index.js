@@ -3,7 +3,6 @@ const c = console
 async function getDeveloperId(nome) {
     let content = nome   //document.querySelector('.content-title').textContent;
     content = encodeURI(content);
-    c.log(content, 'encodado');
 
     const url = `https://api.rawg.io/api/developers?key=6b749e73010d4081b7a673763e7c93d6&search=${content}&page_size=1`;
 
@@ -16,6 +15,24 @@ async function getDeveloperId(nome) {
 
     let devId = res.results[0].id;
     return devId;
+}
+
+async function goToDev(devId, nome) {
+    const el = document.querySelector(`.${nome.replaceAll(' ', '-')}`);
+    c.log(el);
+    const view = `<a href="/developer?id=${devId}">${nome}
+    <span class="material-symbols-outlined" 
+    style=" font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 30
+  ">
+        chevron_right
+    </span>
+    </a>`;
+
+    el.innerHTML = view;
 }
 
 async function putData(nome) {
@@ -39,6 +56,8 @@ async function putData(nome) {
     for (const dado of results) {
       createCardView(dado, nome);
     }
+
+    goToDev(devId, nome)
 };
 
 function createCardView(dado, nome) {
@@ -46,10 +65,8 @@ function createCardView(dado, nome) {
     const content = document.querySelector(`.${className}`).nextSibling.nextSibling;
     let main = content.firstChild.nextSibling;
 
-    c.log(main);
-
-    if (dado.name.length > 23) {
-        dado.name = dado.name.substring(0, 23) + '...';
+    if (dado.name.length > 20) {
+        dado.name = dado.name.substring(0, 20) + '...';
     }
 
     const card = `
@@ -92,6 +109,7 @@ function createCardView(dado, nome) {
     // c.log(card);
 };
 
+
 function callSwiper() {
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
@@ -105,5 +123,5 @@ function callSwiper() {
 }
 
 
-export default { putData };
+export default { putData, getDeveloperId };
   

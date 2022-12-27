@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../resources/css/index.css">
+    <link rel="stylesheet" href="../resources/css/dev.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <title>Desenvolvedor</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <figure>
+                <img src="../resources/img-main/logo.svg" id="logo" alt="DittoG Logo">
+            </figure>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="dev-title">
+            <h1 class="developer">Desenvolvedor</h1>
+        </div>
+
+        <div class="games-container"></div>
+        <div class="games-ctrl">
+            <button class="prev-btn">
+                
+            </button>
+            <div class="games-qtd" >
+                <span class="page-games"></span>
+                /
+                <span class="total-games"></span>
+            </div>
+            <button class="next-btn">
+                
+            </button>
+        </div>
+    </div>
+
+    <script src="../resources/js/developer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- <script>
+        function reloadGames(){
+            console.log('ssss')
+        };
+    </script> -->
+    <script type="module">
+        import Index from './../resources/js/developer.js';
+        
+        const c = console;
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const id = urlParams.get('id')
+        c.log(id);
+
+        const firstUrl = `https://api.rawg.io/api/games?key=6b749e73010d4081b7a673763e7c93d6&developers=${id}&page_size=30`
+
+        const el = document.querySelector('.games-container');
+        let pgQtd = 30;
+        // let urlPageNumber = 1;
+        let nextPage = '';
+        let prevPage = undefined;
+
+        function getTitles() {
+            Index.putData(id, el);            
+        }
+
+        async function putData(devId, el, link) {
+
+            c.log(devId);    
+
+            const url = link //`https://api.rawg.io/api/games?key=6b749e73010d4081b7a673763e7c93d6&developers=${devId}&page=${urlPageNumber}&page_size=30`;
+
+            const config = {
+            method: 'get',
+            headers: {},
+            }
+
+            const data = await (await fetch(url, config)).json();
+
+            nextPage = data.next;
+            c.log(nextPage)
+            prevPage = data.previous;
+            c.log(prevPage)
+
+            let gamesQtd = data.count;
+            const results = data.results;    
+
+            const main = el;
+            main.innerHTML = '';
+
+            for (const dado of results) {
+                Index.createCardView(dado, el);
+            }
+
+            Index.ableButton(nextPage, prevPage, pgQtd, gamesQtd);
+};
+
+        async function changeTitles() {
+
+            putData(id, el, firstUrl);
+
+            const url = `https://api.rawg.io/api/developers/${id}?key=6b749e73010d4081b7a673763e7c93d6`;
+
+            const config = {
+            method: 'get',
+            headers: {},
+            }
+
+            const data = await (await fetch(url, config)).json();
+
+            const name = data.name;
+
+
+            const title = document.querySelector('.developer');
+            title.textContent = name;
+            document.title = name;
+        }        
+        document.body.onload = changeTitles;
+
+        // NEXT PAGE
+        const nextBtn = document.querySelector('.next-btn');
+        nextBtn.addEventListener('click', () => {
+            pgQtd = pgQtd +30;
+            putData(id, el, nextPage);
+        });
+
+        // PREVIOUS PAGE
+        const prevBtn = document.querySelector('.prev-btn');
+        prevBtn.addEventListener('click', () => {
+            pgQtd = pgQtd -30;
+            putData(id, el, prevPage);
+        });
+        
+    </script>
+
+</body>
+</html>
