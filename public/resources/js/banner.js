@@ -25,8 +25,6 @@ function createBannerView(data, el) {
 
     let genres = ``
 
-    c.log(data.genres[0].name)
-
     for (const g of data.genres){
         genres = genres + "\n" + `                                <div class="genre-tag">${g.name}</div>`
     }
@@ -38,7 +36,7 @@ function createBannerView(data, el) {
                 <div class="card-footer">
                     <div class="card-footer-content">
                         <div class="major-infos">
-                            <h2 class="title"> <a href="/games?=${data.id}">${data.name}</a> </h2>
+                            <h2 class="title"> <a href="/games?id=${data.id}">${data.name}</a> </h2>
                             <div>
                                 <h4 class="developer">${data.publishers[0].name}</h4>
                                 <span> | </span>
@@ -56,7 +54,6 @@ function createBannerView(data, el) {
             </div>
         </div>`;
 
-    c.log(banner)
     main.insertAdjacentHTML('beforeend', banner);
 
     // callSwiper();

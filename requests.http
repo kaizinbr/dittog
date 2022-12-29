@@ -31,7 +31,7 @@ GET https://api.rawg.io/api/games?key={{key}}&search=fifa
 
 
 ### GET pontos
-GET https://api.rawg.io/api/games/546464?key=6b749e73010d4081b7a673763e7c93d6
+GET https://api.rawg.io/api/games/5525?key=6b749e73010d4081b7a673763e7c93d6
 
 ### GET ponto por nome
 GET http://localhost:3000/get-pontos/nome/Teste

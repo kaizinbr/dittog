@@ -24,12 +24,13 @@
 }
 
 body {
+    padding-top: 70px; /* Altura do menu */
     background-color: var(--eerie-black);
 }
 
 header{
     background-color: var(--op-eerie-black);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(25px);
     height: 70px;
     padding: 0px;
     margin: 0px;
@@ -38,6 +39,9 @@ header{
     justify-content: center;
     align-items: center;
     /* position: fixed; */
+    position: fixed;
+    top: 0;
+    z-index: 5;
 }
 
 header nav {

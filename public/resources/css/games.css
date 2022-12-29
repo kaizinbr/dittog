@@ -1,0 +1,424 @@
+body {
+    padding-top: 0;
+    background-image: url(../img/placeholder.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100%;
+    backdrop-filter: blur(25px);
+}
+
+header {
+    position: fixed;
+    top: 0;
+}
+
+main{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 70px;
+}
+
+.front-game{
+    /* top: -70px;calc(50vw - 70px); */
+    display: flex;
+    position: relative;
+    background-image: url(../img/placeholder.jpg);
+    background-size: auto 60vw;
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 100%;
+    width: 100%;
+}
+
+.front-game .bg {
+    background: linear-gradient(to top, rgba(37, 37, 37, 1) 25%, rgba(76, 0, 255, 0));
+    width: 100%;
+    position: relative;
+    
+    height: calc(45vw - 70px + 200px);
+}
+
+
+.game-cover{
+    margin-top: calc(40vw - 70px);
+    height: 300px;
+    padding-left: 50px;
+}
+
+.game-cover h1.game-title{
+    color: var(--cultured);
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.game-cover .cover-information .upper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    gap: 30px;
+}
+
+.game-cover .cover-information .upper h3{
+    color: var(--gainsboro);
+    font-size: 1.8rem;
+    font-weight: 500;    
+}
+
+.game-cover .cover-information .upper h3.publisher{
+    font-weight: 700;    
+}
+
+.game-cover .cover-information .down{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    gap: 30px;
+}
+
+.game-cover .cover-information .down h3{
+    color: var(--light-gray);
+    font-size: 1.3rem;
+    font-weight: 400;    
+}
+
+.game-cover .cover-information .down span.details{
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+
+
+.front-game img{
+    height: auto;
+    min-height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    /* top: 70px; */
+}
+
+
+.bg-change{
+    background: linear-gradient(to bottom, rgba(37, 37, 37, 1) , rgba(37, 37, 37, 0));
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -3px;
+}
+
+.bg-change img{
+    height: 30px;
+    width: auto;
+    color: var(--eerie-black);
+    z-index: 3;
+}
+
+/* hr {
+    border: none;
+    border-top: 3px double #333;
+    color: rgb(105, 105, 105);
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+hr:after {
+    content: url(../img-main/symbol\ black.svg);
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+} */
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: -65vh;
+    min-height: 100vh;
+}
+
+.container .main-infos{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.container .description{
+    background-color: var(--op-eerie-black);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease-in-out;
+}
+
+
+.container .description p{
+    color: var(--cultured);
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.container .description h2{
+    color: var(--cultured);
+    margin-top: 20px;
+}
+
+.container .description p:first-child{
+    margin-top: 0;
+}
+
+/* LOJAS */
+
+.container .stores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    min-height: 350px;
+}
+/* 
+.container .stores .vertical-line{
+    width: 1px;
+    height: 200px;
+    background-color: gray;
+} */
+
+.container .stores .store {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 240px;
+}
+
+
+.container .stores .store figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 240px;
+    background-color: var(--op-eerie-black);
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.container .stores .store img{
+    height: 100%;
+    width: auto;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    min-height: 300px;
+} 
+
+.images .game-pic1, .images .game-pic2{
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+    width: 400px;
+    height: 225px;
+    aspect-ratio: 16/9;
+    border-radius: 15px;
+    margin: 20px;
+    transition: all .4s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 20px 20px 0 rgb(0 0 0 / 15%);
+    border: solid 1px rgba(255, 255, 255, 0);
+}
+
+.images .game-pic1:hover, .images .game-pic2:hover{
+    transform: scale(1.1);
+    border: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.images .game-pic2 img, .images .game-pic1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CRITICA */
+
+.critic-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 80%; */
+    margin-top: 50px;
+}
+
+.critic-box .metacritic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 80%;
+    margin-top: 50px;
+}
+
+.metacritic .metascore-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: #57a73c6d;
+    border: 1px solid #97c5886d;
+    border-radius: 28px;
+}
+
+.metacritic .metascore-info .metascore-score{
+    font-size: 6rem;
+    color: var(--gainsboro);
+    font-weight: 700;
+}
+
+.metacritic .metascore-info .metascore-title{
+    font-size: 1.3rem;
+}
+
+.metacritic .individual-scores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    min-height: 300px;
+}
+
+.metacritic .individual-scores .score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    /* border: 1px solid #ffffff8f; */
+    border-radius: 28px;
+}
+
+.metacritic .individual-scores .score .score-score{
+    font-size: 5.5rem;
+    color: var(--gainsboro);
+    font-weight: 700;
+}
+
+.metacritic .individual-scores .score .score-title{
+    font-size: 1.3rem;
+    color: var(--gainsboro);
+    font-weight: 400;
+}
+
+.metacritic .individual-scores .vertical-line{
+    width: 2px;
+    height: 200px;
+    background-color: rgba(198, 211, 211, 0.4);
+}
+
+
+/*  detalhes do jogo */
+
+.game-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.game-details-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+}
+
+.game-details-box .details {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: justify;
+    align-items: center;
+    gap: 60px;
+    margin-top: 20px;
+    background-color: var(--op-eerie-black);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.details h3{
+    color: var(--cultured);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+
+/* GENEROS E TAGS */
+
+
+
+.genres, .tags{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    margin-top: 60px;
+}
+
+.genres .swiper-slide, .tags .swiper-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.genres .card, .tags .card {
+    
+    box-shadow: 0 20px 20px 0 rgb(0 0 0 / 15%);
+}
+

@@ -101,13 +101,7 @@
 
     </div>
 
-    <!-- <div class="page__art">
-        <div class="art-wrapper" style="height:100%">
-            <div class="art art_secondary" style="height:100%;background-color:transparent;background-image:linear-gradient(to left, rgba(0,0,0,0.7), #151515),url('/assets/images/bioshock-infinite_rgba(0,0,0,0.7).283198f15004af544272faba8557e99f.jpg');z-index:1">
-                <div><img src="resources/img/b11127b9ee3c3701bd15b9af3286d20e.jpg" style="position:absolute;left:-9999px" alt=""/></div>
-            </div>
-        </div>
-    </div> -->
+
 
     <script src="resources/js/index.js"></script>
     <script type="module" src="resources/js/banner.js"></script>
@@ -123,7 +117,6 @@
         const c = console;
 
         function getTitles() {
-            
             const titles = document.querySelectorAll('.content-title');
             let titulos = [];
             for (const title of titles) {
@@ -133,7 +126,6 @@
 
                 title.classList.add(newClass);
             }
-            c.log(titulos);
 
             for (const titulo of titulos) {
                 Index.putData(titulo);

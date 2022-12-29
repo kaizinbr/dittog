@@ -72,7 +72,7 @@ function createCardView(dado, nome) {
     const card = `
     <div class="swiper-slide">
         <div class="card">
-            <img src="${dado.background_image}" alt="">
+            <img src="${dado.background_image}" alt="${dado.name}">
             <div class="infos">
                 <div class="game-infos">
                     <h2>${dado.name}</h2>
@@ -87,7 +87,7 @@ function createCardView(dado, nome) {
                 </div>
                 <div class="button">                        
                     <button>
-                        <a href="/game/${dado.id}">
+                        <a href="/games?id=${dado.id}">
                             <h3>Ver</h3>
                             <span class="material-symbols-outlined arrow">
                                 arrow_forward_ios

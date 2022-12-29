@@ -1469,6 +1469,427 @@
         },
         "clip": null,
         "description_raw": "You have arrived in Teyvat — a fantasy world where the seven elements flow and converge.\r\n\r\n\r\nIn the distant past, the Archons granted mortals unique elemental abilities. With the help of such powers, people formed a bountiful homeland out of the wilderness. However, 500 years ago, the collapse of an ancient civilization turned the universe upside down...\r\nThough the calamity the world suffered has ceased, peace has yet to be restored.\r\n\r\n\r\nYou, as the main character, are a traveler drifted from another world who has awoken in this land. You will explore this wondrous world freely, make friends along the way, and look for \"The Seven\" — Archons of the seven elements. Every piece of your adventure will unearth something miraculous, and the lost will eventually be found.\r\n\r\nsource: https://genshin.mihoyo.com/en"
-        }
+        },
+        {
+            "id": 4744,
+            "slug": "prince-of-persia",
+            "name": "Prince of Persia (2008)",
+            "name_original": "Prince of Persia (2008)",
+            "description": "<p>Prince of Persia series is known for its acrobatic platforming gameplay, got a visual rehaul in this installment. It features an open-world ancient Persian city-state, that is fully available for the players.</p>\n<p>At the heart of the game this time is not a fictional plot, but real Persian mythology. According to one of the legends, the god Ariman spewed out dark energy onto the Persian land. And the hero is to liberate it from this. This time, the main character has a trust-worthy sidekick. It is controlled by a AI and the interaction of two characters builds the basic gameplay mechanics.</p>\n<p>The world of the game will have to travel a lot in the empty game world: the whole 24 levels of the game are populated with fewer than 10 NPCs. But hands down: visually they look like an illustration from the ancient Persian book. Acrobatic stunts were reinvented and the movement of the main character now feels more fluid and natural.</p>",
+            "metacritic": 82,
+            "metacritic_platforms": [
+              
+            ],
+            "released": "2008-12-02",
+            "tba": false,
+            "updated": "2022-12-27T22:02:31",
+            "background_image": "https://media.rawg.io/media/games/956/95640d5ea0288c187dbce849a4254a41.jpg",
+            "background_image_additional": "https://media.rawg.io/media/screenshots/1aa/1aa86f5c803c67104caaf9ab521bef91.jpg",
+            "website": "http://www.princeofpersiagame.com",
+            "rating": 3.76,
+            "rating_top": 4,
+            "ratings": [
+              {
+                "id": 4,
+                "title": "recommended",
+                "count": 431,
+                "percent": 55.54
+              },
+              {
+                "id": 3,
+                "title": "meh",
+                "count": 188,
+                "percent": 24.23
+              },
+              {
+                "id": 5,
+                "title": "exceptional",
+                "count": 118,
+                "percent": 15.21
+              },
+              {
+                "id": 1,
+                "title": "skip",
+                "count": 39,
+                "percent": 5.03
+              }
+            ],
+            "reactions": {
+              "1": 1,
+              "3": 1,
+              "4": 1,
+              "5": 1,
+              "7": 1,
+              "9": 1,
+              "11": 1
+            },
+            "added": 3356,
+            "added_by_status": {
+              "yet": 130,
+              "owned": 2118,
+              "beaten": 756,
+              "toplay": 81,
+              "dropped": 263,
+              "playing": 8
+            },
+            "playtime": 1,
+            "screenshots_count": 117,
+            "movies_count": 0,
+            "creators_count": 11,
+            "achievements_count": 122,
+            "parent_achievements_count": 65,
+            "reddit_url": "https://www.reddit.com/r/PrinceOfPersia/",
+            "reddit_name": "Prince of Persia Series",
+            "reddit_description": "Prince of Persia is a video game franchise created by Jordan Mechner. It has been rebooted twice since its acquisition by Ubisoft and also made its way into various forms of media. The subreddit is a place to discuss anything related to the franchise. Note: This subreddit is not official and is community run. It does not have any connection with Ubisoft or Jordan Mechner.",
+            "reddit_logo": "",
+            "reddit_count": 366,
+            "twitch_count": 101,
+            "youtube_count": 210713,
+            "reviews_text_count": 4,
+            "ratings_count": 772,
+            "suggestions_count": 548,
+            "alternative_names": [
+              "Prince of Persia 2008"
+            ],
+            "metacritic_url": "",
+            "parents_count": 0,
+            "additions_count": 2,
+            "game_series_count": 13,
+            "user_game": null,
+            "reviews_count": 776,
+            "saturated_color": "0f0f0f",
+            "dominant_color": "0f0f0f",
+            "parent_platforms": [
+              {
+                "platform": {
+                  "id": 1,
+                  "name": "PC",
+                  "slug": "pc"
+                }
+              },
+              {
+                "platform": {
+                  "id": 2,
+                  "name": "PlayStation",
+                  "slug": "playstation"
+                }
+              },
+              {
+                "platform": {
+                  "id": 3,
+                  "name": "Xbox",
+                  "slug": "xbox"
+                }
+              },
+              {
+                "platform": {
+                  "id": 5,
+                  "name": "Apple Macintosh",
+                  "slug": "mac"
+                }
+              }
+            ],
+            "platforms": [
+              {
+                "platform": {
+                  "id": 4,
+                  "name": "PC",
+                  "slug": "pc",
+                  "image": null,
+                  "year_end": null,
+                  "year_start": null,
+                  "games_count": 503856,
+                  "image_background": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+                },
+                "released_at": "2008-12-02",
+                "requirements": {
+                  "minimum": "OS: Windows® XP/Windows Vista® (only)                    \nProcessor: Dual core processor 2.6 GHz Intel® Pentium® D or AMD Athlon™ 64 X2 3800+ (Intel Core® 2 Duo 2.2 GHz or AMD Athlon 64 X2 4400+ or better recommended)                     \nMemory: 1 GB Windows XP/2 GB Windows Vista                    \nGraphics: 256 MB DirectX® 10.0–compliant video card or DirectX 9.0–compliant card with Shader Model 3.0 or higher (see supported list)*                     \nDirectX Version: DirectX 9.0 or 10.0 libraries                    \nHard Drive: 9 GB                    \nSound Card: DirectX 9.0 or 10.0–compliant sound card (5.1 sound card recommended)                    \nInput: Windows-compliant keyboard, mouse, optional controller (Xbox 360® Controller for Windows recommended)                     *Supported Video Cards at Time of Release:\n                    ATI® RADEON® X1600*/1650*-1950/HD 2000–4000 series\n                    NVIDIA GeForce® 6800*/7/8/9/GTX 260–280 series\n                    *PCI Express only supported                    \nLaptop versions of these cards may work but are NOT supported. These chipsets are the only ones that will run this game. For the most up-to-date minimum requirement listings, please visit the FAQ for this game on our support website at: http://support.ubi.com.                    \nNVIDIA® nForce™ or other motherboards/soundcards containing the Dolby® Digital Interactive Content Encoder required for Dolby Digital audio."
+                }
+              },
+              {
+                "platform": {
+                  "id": 5,
+                  "name": "macOS",
+                  "slug": "macos",
+                  "image": null,
+                  "year_end": null,
+                  "year_start": null,
+                  "games_count": 101428,
+                  "image_background": "https://media.rawg.io/media/games/942/9424d6bb763dc38d9378b488603c87fa.jpg"
+                },
+                "released_at": "2008-12-02",
+                "requirements": {
+                  
+                }
+              },
+              {
+                "platform": {
+                  "id": 16,
+                  "name": "PlayStation 3",
+                  "slug": "playstation3",
+                  "image": null,
+                  "year_end": null,
+                  "year_start": null,
+                  "games_count": 3489,
+                  "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+                },
+                "released_at": "2008-12-02",
+                "requirements": {
+                  
+                }
+              },
+              {
+                "platform": {
+                  "id": 14,
+                  "name": "Xbox 360",
+                  "slug": "xbox360",
+                  "image": null,
+                  "year_end": null,
+                  "year_start": null,
+                  "games_count": 2774,
+                  "image_background": "https://media.rawg.io/media/games/8e4/8e4de3f54ac659e08a7ba6a2b731682a.jpg"
+                },
+                "released_at": "2008-12-02",
+                "requirements": {
+                  
+                }
+              }
+            ],
+            "stores": [
+              {
+                "id": 480482,
+                "url": "",
+                "store": {
+                  "id": 2,
+                  "name": "Xbox Store",
+                  "slug": "xbox-store",
+                  "domain": "microsoft.com",
+                  "games_count": 4755,
+                  "image_background": "https://media.rawg.io/media/games/b72/b7233d5d5b1e75e86bb860ccc7aeca85.jpg"
+                }
+              },
+              {
+                "id": 25930,
+                "url": "",
+                "store": {
+                  "id": 5,
+                  "name": "GOG",
+                  "slug": "gog",
+                  "domain": "gog.com",
+                  "games_count": 4585,
+                  "image_background": "https://media.rawg.io/media/games/942/9424d6bb763dc38d9378b488603c87fa.jpg"
+                }
+              },
+              {
+                "id": 21577,
+                "url": "",
+                "store": {
+                  "id": 1,
+                  "name": "Steam",
+                  "slug": "steam",
+                  "domain": "store.steampowered.com",
+                  "games_count": 69655,
+                  "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+                }
+              },
+              {
+                "id": 5084,
+                "url": "",
+                "store": {
+                  "id": 3,
+                  "name": "PlayStation Store",
+                  "slug": "playstation-store",
+                  "domain": "store.playstation.com",
+                  "games_count": 7787,
+                  "image_background": "https://media.rawg.io/media/games/021/021c4e21a1824d2526f925eff6324653.jpg"
+                }
+              },
+              {
+                "id": 28518,
+                "url": "",
+                "store": {
+                  "id": 6,
+                  "name": "Nintendo Store",
+                  "slug": "nintendo",
+                  "domain": "nintendo.com",
+                  "games_count": 8878,
+                  "image_background": "https://media.rawg.io/media/games/73e/73eecb8909e0c39fb246f457b5d6cbbe.jpg"
+                }
+              },
+              {
+                "id": 34336,
+                "url": "",
+                "store": {
+                  "id": 7,
+                  "name": "Xbox 360 Store",
+                  "slug": "xbox360",
+                  "domain": "marketplace.xbox.com",
+                  "games_count": 1911,
+                  "image_background": "https://media.rawg.io/media/games/120/1201a40e4364557b124392ee50317b99.jpg"
+                }
+              }
+            ],
+            "developers": [
+              {
+                "id": 405,
+                "name": "Ubisoft",
+                "slug": "ubisoft",
+                "games_count": 334,
+                "image_background": "https://media.rawg.io/media/games/336/336c6bd63d83cf8e59937ab8895d1240.jpg"
+              },
+              {
+                "id": 3709,
+                "name": "Ubisoft Montreal",
+                "slug": "ubisoft-montreal",
+                "games_count": 121,
+                "image_background": "https://media.rawg.io/media/games/5e4/5e4bff02098b2b6f824c68286d5da1a6.jpg"
+              },
+              {
+                "id": 61,
+                "name": "Gameloft",
+                "slug": "gameloft",
+                "games_count": 174,
+                "image_background": "https://media.rawg.io/media/screenshots/1f0/1f02774031aac19e2a0a32f5b291dcbe.jpg"
+              }
+            ],
+            "genres": [
+              {
+                "id": 4,
+                "name": "Action",
+                "slug": "action",
+                "games_count": 168167,
+                "image_background": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg"
+              },
+              {
+                "id": 3,
+                "name": "Adventure",
+                "slug": "adventure",
+                "games_count": 128587,
+                "image_background": "https://media.rawg.io/media/games/e2d/e2d3f396b16dded0f841c17c9799a882.jpg"
+              }
+            ],
+            "tags": [
+              {
+                "id": 31,
+                "name": "Singleplayer",
+                "slug": "singleplayer",
+                "language": "eng",
+                "games_count": 193456,
+                "image_background": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+              },
+              {
+                "id": 13,
+                "name": "Atmospheric",
+                "slug": "atmospheric",
+                "language": "eng",
+                "games_count": 26601,
+                "image_background": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg"
+              },
+              {
+                "id": 42,
+                "name": "Great Soundtrack",
+                "slug": "great-soundtrack",
+                "language": "eng",
+                "games_count": 3221,
+                "image_background": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg"
+              },
+              {
+                "id": 118,
+                "name": "Story Rich",
+                "slug": "story-rich",
+                "language": "eng",
+                "games_count": 16869,
+                "image_background": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg"
+              },
+              {
+                "id": 36,
+                "name": "Open World",
+                "slug": "open-world",
+                "language": "eng",
+                "games_count": 5803,
+                "image_background": "https://media.rawg.io/media/games/16b/16b1b7b36e2042d1128d5a3e852b3b2f.jpg"
+              },
+              {
+                "id": 149,
+                "name": "Third Person",
+                "slug": "third-person",
+                "language": "eng",
+                "games_count": 8455,
+                "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+              },
+              {
+                "id": 64,
+                "name": "Fantasy",
+                "slug": "fantasy",
+                "language": "eng",
+                "games_count": 22740,
+                "image_background": "https://media.rawg.io/media/games/4e6/4e6e8e7f50c237d76f38f3c885dae3d2.jpg"
+              },
+              {
+                "id": 6,
+                "name": "Exploration",
+                "slug": "exploration",
+                "language": "eng",
+                "games_count": 17860,
+                "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+              },
+              {
+                "id": 68,
+                "name": "Hack and Slash",
+                "slug": "hack-and-slash",
+                "language": "eng",
+                "games_count": 3085,
+                "image_background": "https://media.rawg.io/media/games/21a/21ad672cedee9b4378abb6c2d2e626ee.jpg"
+              },
+              {
+                "id": 336,
+                "name": "controller support",
+                "slug": "controller-support",
+                "language": "eng",
+                "games_count": 293,
+                "image_background": "https://media.rawg.io/media/games/c81/c812e158129e00c9b0f096ae8a0bb7d6.jpg"
+              },
+              {
+                "id": 188,
+                "name": "Parkour",
+                "slug": "parkour",
+                "language": "eng",
+                "games_count": 3027,
+                "image_background": "https://media.rawg.io/media/games/569/56978b5a77f13aa2ec5d09ec81d01cad.jpg"
+              },
+              {
+                "id": 138,
+                "name": "Relaxing",
+                "slug": "relaxing",
+                "language": "eng",
+                "games_count": 12494,
+                "image_background": "https://media.rawg.io/media/games/1f5/1f5ddf7199f2778ff83663b93b5cb330.jpg"
+              },
+              {
+                "id": 1867,
+                "name": "puzzles",
+                "slug": "puzzles",
+                "language": "eng",
+                "games_count": 8570,
+                "image_background": "https://media.rawg.io/media/games/de6/de66bc4c72b45c3bb906c85d0628112d.jpg"
+              }
+            ],
+            "publishers": [
+              {
+                "id": 918,
+                "name": "Ubisoft Entertainment",
+                "slug": "ubisoft-entertainment",
+                "games_count": 1047,
+                "image_background": "https://media.rawg.io/media/games/c73/c73c4ffebfe968ba0982a56c2b5020ef.jpg"
+              }
+            ],
+            "esrb_rating": {
+              "id": 3,
+              "name": "Teen",
+              "slug": "teen"
+            },
+            "clip": null,
+            "description_raw": "Prince of Persia series is known for its acrobatic platforming gameplay, got a visual rehaul in this installment. It features an open-world ancient Persian city-state, that is fully available for the players.\n\nAt the heart of the game this time is not a fictional plot, but real Persian mythology. According to one of the legends, the god Ariman spewed out dark energy onto the Persian land. And the hero is to liberate it from this. This time, the main character has a trust-worthy sidekick. It is controlled by a AI and the interaction of two characters builds the basic gameplay mechanics.\n\nThe world of the game will have to travel a lot in the empty game world: the whole 24 levels of the game are populated with fewer than 10 NPCs. But hands down: visually they look like an illustration from the ancient Persian book. Acrobatic stunts were reinvented and the movement of the main character now feels more fluid and natural."
+          }
     ]
 }

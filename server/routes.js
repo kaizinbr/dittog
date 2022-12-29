@@ -21,9 +21,19 @@ router.get('/developer', async (req, res) => {
 //  res.json(response);
 });
 
+router.get('/games', async (req, res) => {
+  res.sendFile(path.join(__dirname, '/../public/games.html'));
+});
+
 router.get('/banner-data', async (req, res) => {
   const response = await Banner.getBannerData();
  res.json(response);
+});
+
+// ESPECIAL PRA CRIAR AS PAGES DE GAMES
+router.get('/game-data', async (req, res) => {
+  const response = await Banner.getGameData();
+  res.json(response);
 });
 
   router.use(errors());

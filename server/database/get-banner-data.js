@@ -11,4 +11,16 @@ async function getBannerData() {
     return content;
 };
 
-export default { getBannerData }
+async function getGameData() {
+    const file = resolve(process.cwd(), 'public', 'resources', 'json', 'index-banner-infos.json');
+  
+    const content = JSON.parse(readFileSync(file));
+
+    const result = content.games[2]
+
+    return result;
+};
+
+getGameData()
+
+export default { getBannerData, getGameData }
