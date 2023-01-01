@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/index.css">
+    <link rel="stylesheet" href="resources/css/search.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <title>Index</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <figure>
+                <img src="resources/img-main/logo.svg" id="logo" alt="DittoG Logo">
+            </figure>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="/pesquisa">
+                    <span class="material-symbols-outlined">
+                        search
+                        </span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="search-bar">
+                <form action="/pesquisa" autocomplete="off">
+                    <div class="up-search">                        
+                        <input autocomplete="off" type="text" name="search" id="search" placeholder="Pesquisar" class="search">
+                        <button type="submit" class="search-btn">
+                            <span class="material-symbols-outlined">
+                                search
+                            </span>
+                        </button>
+                    </div>
+                    <div class="select-mode">
+                        <div>
+                            <input type="radio" id="jogos" name="mode" value="games" checked>
+                            <label for="jogos">Jogos</label>
+                        </div>
+                      
+                        <div>
+                            <input type="radio" id="desenvolvedores" name="mode" value="developers">
+                            <label for="desenvolvedores">Desenvolvedores</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="results-box">
+            <div class="res-count">
+                
+            </div>
+            <div class="results">
+            </div>
+        </div>
+    </main>
+
+    <script src="resources/js/index.js"></script>
+    <script type="module" src="resources/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+    </script>
+    <script type="module">
+        import Index from './resources/js/index.js';
+        import Search from './resources/js/search.js';
+
+        const c = console;
+        const urlParams = new URLSearchParams(window.location.search);
+
+        
+
+        function init() {
+            const params = urlParams.get('search');
+            const mode = urlParams.get('mode');
+            c.log(params);
+
+            if (params == null || params == '') {
+                return;
+            } else{
+                const input = document.querySelector('#search');
+                input.value = params;
+
+                Search.search(params, mode);
+            }
+
+            
+        }
+
+        init();
+
+    </script>
+
+</body>
+</html>

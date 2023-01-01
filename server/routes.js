@@ -14,7 +14,7 @@ const router = Router();
 const c = console;
 
 
-router.get('/developer', async (req, res) => {
+router.get('/developers', async (req, res) => {
   res.sendFile(path.join(__dirname, '/../public/developer.html'));
   const id = parseInt((req.params.id));
 
@@ -28,6 +28,10 @@ router.get('/games', async (req, res) => {
 router.get('/banner-data', async (req, res) => {
   const response = await Banner.getBannerData();
  res.json(response);
+});
+
+router.get('/pesquisa', async (req, res) => {
+  res.sendFile(path.join(__dirname, '/../public/search.html'));
 });
 
 // ESPECIAL PRA CRIAR AS PAGES DE GAMES

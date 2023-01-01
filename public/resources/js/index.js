@@ -76,7 +76,7 @@ function createCardView(dado, nome) {
             <div class="infos">
                 <div class="game-infos">
                     <h2>${dado.name}</h2>
-                    <div class="details">
+                    <div class="card-details">
                         <span class="material-symbols-outlined">
                             visibility
                         </span><h3>${dado.reviews_count}</h3>

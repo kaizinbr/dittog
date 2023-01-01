@@ -87,7 +87,7 @@ header figure img#logo {
     align-items: center;
     /* margin-top: 20px; */
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     position: relative;
     margin: 0;
     padding: 0;
@@ -313,7 +313,7 @@ header figure img#logo {
     font-weight: 500;
 }
 
-.card .game-infos .details{
+.card .game-infos .card-details{
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
@@ -321,7 +321,7 @@ header figure img#logo {
     flex-direction: row;
 }
 
-.card .game-infos .details h3{
+.card .game-infos .card-details h3{
     font-size: .6rem;
     font-weight: 400;
     color: var(--light-gray);
@@ -440,4 +440,261 @@ header figure img#logo {
     z-index: -2;
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 480px) {
+    .swiper-container {
+        height: 220px;
+    }
+    
+    .swiper-container h1{
+        font-size: 1.3rem;
+        margin-top: 10px;
+    }
+
+    .swiper-slide{
+        width: 50% !important;
+        margin-top: -20px !important;
+        margin-right: 10px !important;
+    }
+
+    .swiper-slide .card{
+        width: 100%;
+        height: auto;
+        max-height: 110px;
+        aspect-ratio: 5/3.5;
+        margin: 8px;
+    }
+
+    .card .infos{
+        top: 70%;
+        height: 30%;
+    }
+
+    .card .game-infos h2 {
+        font-size: .9rem;
+    }
+
+    .card .game-infos .card-details span.material-symbols-outlined {
+        font-size: .8rem;
+    }
+
+    .card .game-infos .card-details{
+        margin-top: 5px;
+    }
+
+
+    .card .button{
+        width: 50px;
+        height: 30px;
+    }
+
+    .card .button button h3 {
+        font-size: .7rem;
+    }
+
+    .card.banner-card{
+        aspect-ratio: 16/9;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .banner-container{
+        height: 35vh;
+    }
+
+    .banner-container .banner{
+        height: 100%;
+    }
+
+    .banner .card-footer {
+        top: 65%;
+        height: 35%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .banner .card-footer-content .major-infos a, .major-infos h2{
+        font-size: 16px;
+    }
+    
+    .banner .card-footer-content .major-infos h2:hover a{
+        font-size: 18px;
+    }
+
+    .banner .card-footer-content .major-infos h4, .banner .card-footer-content .major-infos span{
+        font-size: 10px;
+    }
+
+    .minor-infos .genres div{
+        font-size: 8px;
+    }
+
+    
+
+    .banner .swiper-slide{
+        margin-right: auto !important;
+    }
+
+    .swiper-slide .card{
+        width: 100%;
+        height: auto;
+        aspect-ratio: 5/3.5;
+        margin: 8px;
+    }
+
+    .card .infos{
+        top: 60%;
+        height: 40%;
+        padding: 5px;
+    }
+
+    .card .game-infos h2 {
+        font-size: .8rem;
+    }
+    
+    .card .game-infos .card-details span.material-symbols-outlined {
+        font-size: .7rem;
+    }
+
+    .card .game-infos .card-details{
+        margin-top: 5px;
+    }
+
+
+    .card .button{
+        width: 50px;
+        height: 30px;
+    }
+
+    .card .button button h3 {
+        font-size: .5rem;
+    }
+
+    .card.banner-card{
+        aspect-ratio: 16/9;
+        min-height: 70%;
+    }
+}
+
+
+@media (max-width: 768px) and (min-width: 576px) { 
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .banner-container{
+        height: 50vh;
+    }
+
+    .banner .card-footer-content .major-infos a{
+        font-size: 1.3rem;
+    }
+    
+    .banner .card-footer-content .major-infos h2:hover a{
+        font-size: 1.7rem;
+    }
+
+    .major-infos h4{
+        font-size: 1rem;
+    }
+
+    .minor-infos .genres div{
+        font-size: .7rem;
+    }
+
+    .swiper-slide{
+        width: 40% !important;
+    }
+
+    .swiper-slide .card{
+        width: 100%;
+        height: auto;
+        aspect-ratio: 5/3.5;
+        margin: 8px;
+    }
+
+    .card .infos{
+        top: 70%;
+        height: 30%;
+    }
+
+    .card .game-infos h2 {
+        font-size: .9rem;
+    }
+
+    .card .game-infos .card-details span.material-symbols-outlined {
+        font-size: .8rem;
+    }
+
+    .card .game-infos .card-details{
+        margin-top: 5px;
+    }
+
+
+    .card .button{
+        width: 50px;
+        height: 30px;
+    }
+
+    .card .button button h3 {
+        font-size: .7rem;
+    }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) and (min-width: 768px) { 
+    .banner-container{
+        height: 65vh;
+    }
+    .swiper-slide{
+        width: 40% !important;
+    }
+
+    .swiper-slide .card{
+        width: 100%;
+        height: auto;
+        aspect-ratio: 5/3.5;
+        margin: 8px;
+    }
+
+    .card .infos{
+        top: 70%;
+        height: 30%;
+    }
+
+    .card .game-infos h2 {
+        font-size: .9rem;
+    }
+
+    .card .game-infos .card-details{
+        margin-top: 5px;
+    }
+
+
+    .card .button{
+        width: 50px;
+        height: 30px;
+    }
+
+    .card .game-infos .card-details span.material-symbols-outlined {
+        font-size: .8rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px)  {  
+    .banner-container{
+        height: 80vh
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+
 }

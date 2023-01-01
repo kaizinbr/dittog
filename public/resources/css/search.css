@@ -1,0 +1,207 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar{
+    width: 700px;
+    height: 60px;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+}
+
+.search-bar .up-search{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+    transition: all 0.4s ease;
+}
+
+.search-bar input{
+    width: 90%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.search-bar input:focus{
+    outline: none;
+}
+
+.search-bar .up-search:focus-within{    
+    border-bottom: 1px solid rgba(204, 204, 204, 0.8);
+}
+
+.search-bar button{
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-bar button:hover{
+    transform: scale(1.2);
+}
+
+.search-bar button span{
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.search-bar .select-mode{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.select-mode input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+.select-mode div{
+    margin-top: 20px;
+}
+
+.select-mode label{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--gainsboro);
+    padding: 7px 15px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background-color: rgba(100, 129, 129, 0.1);
+}
+
+.select-mode label:hover{
+    /* color: #070909; */
+    background-color: rgba(100, 129, 129, 0.5);
+}
+
+.select-mode input:checked + label{
+    /* color: #070909; */
+    background-color: rgba(100, 129, 129, 0.5);
+}
+
+.results-box{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.results-box .res-count{
+    width: 70%;
+    height: 50px;
+}
+
+.results-box .res-count h4{
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--gainsboro);
+}
+
+.results-box .results {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.result-card .game-name{
+    padding-left: 10px;
+}
+
+.result-card .game-name h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--gainsboro);
+}
+
+.results .card {
+    width: 300px;
+    height: 200px;
+    margin: 0;
+}
+
+.results .card .infos{
+    top: 125px;
+    height: 75px;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(0);
+}
+
+.results .card .button{    
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: rgba(135, 135, 135, 0.3);
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 40px;
+    width: 75px;
+    margin-right: 10px;
+    transition: all .4s ease-in-out;
+    backdrop-filter: blur(20px);
+    margin-top: 120px;
+}
+
+.button button{
+    width: 100%;
+}
+
+.results .card .button:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.results .card:hover .button{
+    margin-top: 10px;
+}
