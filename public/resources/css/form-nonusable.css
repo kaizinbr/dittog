@@ -1,0 +1,137 @@
+.contato-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 50px;
+    gap: 30px;
+}
+
+.contato-form{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--op-eerie-black); */
+}
+
+.contato-form h1{
+  margin-bottom: 30px;
+}
+
+.contato-form form{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-box{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: solid 1px rgba(198, 211, 211, 0.4);
+  transition: all 0.3s ease;
+}
+
+.input-box:focus-within {
+  border-bottom: solid 1px rgba(198, 211, 211, 0.8);
+}
+
+.input-box label{
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.contato-box input, .contato-box textarea {
+    width: 100%;
+    max-width: 900px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    /* border-bottom: 1px solid #ccc; */
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.contato-box textarea {
+    height: 200px;
+    resize: none;
+    padding: 10px;
+    background-color: var(--op-eerie-black);
+    border-radius: 9px;
+}
+
+.contato-box input:focus, .contato-box textarea:focus {
+    outline: none;
+}
+
+
+
+.contato-box button:hover {
+  /* color: #070909; */
+  background-color: rgba(100, 129, 129, 0.5);
+}
+.contato-box button {
+  float: right;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gainsboro);
+  padding: 7px 22px;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  background-color: rgba(100, 129, 129, 0.1);
+}
+
+
+
+
+.img-contato {
+  max-width: 50%;
+}
+
+.img-contato img{
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
