@@ -1,6 +1,6 @@
-# curriculo-maker
+# Ditto G
 
-## Projeto de Linguagem de Programação II
+<!-- ## Projeto de Linguagem de Programação II
 
 ### Equipe:
 - Carlos André Martins da Silva (20211780042)
@@ -21,4 +21,4 @@ O projeto conterá um formulário com as informações necessárias para um curr
 ```
 
 ? Problemas? Se estiver no Windows, altere o script dev para ter um "&" após "NODE_ENV=development"
-Se estiver no linux, esse mesmo "&" não deve existir
+Se estiver no linux, esse mesmo "&" não deve existir -->

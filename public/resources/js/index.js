@@ -20,7 +20,7 @@ async function getDeveloperId(nome) {
 async function goToDev(devId, nome) {
     const el = document.querySelector(`.${nome.replaceAll(' ', '-')}`);
     c.log(el);
-    const view = `<a href="/developer?id=${devId}">${nome}
+    const view = `<a href="/developers?id=${devId}">${nome}
     <span class="material-symbols-outlined" 
     style=" font-variation-settings:
     'FILL' 0,
@@ -112,7 +112,7 @@ function createCardView(dado, nome) {
 
 function callSwiper() {
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 20,
         freeMode: true,
         navigation: {

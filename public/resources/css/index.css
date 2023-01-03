@@ -26,6 +26,7 @@
 body {
     padding-top: 70px; /* Altura do menu */
     background-color: var(--eerie-black);
+    min-height: 100vh;
 }
 
 header{
@@ -58,20 +59,42 @@ header nav ul {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-}
-
-header nav ul li{
     list-style: none;
 }
 
 header nav ul li a{
     text-decoration: none;
-    transition: all .4s ease-in-out;
     color: var(--light-gray);
+    padding: 5px;
+    position: relative;
 }
 
-header nav ul li a:hover{
-    color: var(--gainsboro);
+header nav ul li:last-child a{
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--steel-teal);
+    transform: scaleX(0);
+    transform-origin: 50% 50%;
+    transition: transform 0.3s ease;
+}
+  
+header nav ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+header nav ul li a span {
+    font-size: 20px !important;
+    font-weight: bold !important;
 }
 
 header figure img#logo {
@@ -442,6 +465,91 @@ header figure img#logo {
     height: 100%;
 }
 
+/* FOOTER */
+
+footer{
+    background-color: var(--op-eerie-black);
+    backdrop-filter: blur(25px);
+    font-size: 16px;
+    font-weight: 300;
+    padding: 50px 30px 10px 30px;
+    margin: 0px;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+
+footer .footer-content h6{
+    color: var(--gainsboro);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+footer .footer-content .footer-logo{
+    max-width: 40%;
+    font-size: small;
+}
+
+footer .footer-content .footer-logo img{
+    max-width: 200px;
+    height: auto;
+    width: auto;
+    margin-bottom: 30px;
+}
+
+footer .footer-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+footer .footer-content .footer-links ul {
+    gap: 5px;
+}
+
+footer .footer-content a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all .3s ease-in-out;
+}
+
+footer .footer-content a:hover{
+    color: var(--cultured);
+}
+
+footer .footer-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer .footer-footer p{
+    opacity: 0.5;
+    font-size: small;
+    font-weight: 300;
+    margin: 0;
+}
+
 @media (max-width: 480px) {
     .swiper-container {
         height: 220px;
@@ -453,7 +561,7 @@ header figure img#logo {
     }
 
     .swiper-slide{
-        width: 50% !important;
+        width: 60% !important;
         margin-top: -20px !important;
         margin-right: 10px !important;
     }
@@ -461,8 +569,8 @@ header figure img#logo {
     .swiper-slide .card{
         width: 100%;
         height: auto;
-        max-height: 110px;
-        aspect-ratio: 5/3.5;
+        max-height: 150px;
+        aspect-ratio: 5/4;
         margin: 8px;
     }
 
@@ -495,6 +603,14 @@ header figure img#logo {
 
     .card.banner-card{
         aspect-ratio: 16/9;
+    }  
+    
+    footer, footer .footer-content h6 {
+        font-size: 13px;
+    }
+
+    footer .footer-footer p, footer .footer-content .footer-logo {
+        font-size: 8px;
     }
 }
 
@@ -539,7 +655,7 @@ header figure img#logo {
     .swiper-slide .card{
         width: 100%;
         height: auto;
-        aspect-ratio: 5/3.5;
+        aspect-ratio: 5/4;
         margin: 8px;
     }
 
@@ -575,6 +691,22 @@ header figure img#logo {
         aspect-ratio: 16/9;
         min-height: 70%;
     }
+
+    footer, footer .footer-content h6 {
+        font-size: 13px;
+    }
+
+    footer .footer-footer p, footer .footer-content .footer-logo {
+        font-size: 8px;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+
 }
 
 
@@ -640,6 +772,14 @@ header figure img#logo {
     .card .button button h3 {
         font-size: .7rem;
     }
+
+    footer, footer .footer-content h6 {
+        font-size: 13px;
+    }
+
+    footer .footer-footer p, footer .footer-content .footer-logo {
+        font-size: 8px;
+    }
  }
 
 /* Medium devices (tablets, 768px and up) */
@@ -680,6 +820,8 @@ header figure img#logo {
     .card .game-infos .card-details span.material-symbols-outlined {
         font-size: .8rem;
     }
+
+    
 }
 
 /* Large devices (desktops, 992px and up) */

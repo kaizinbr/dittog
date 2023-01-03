@@ -3,8 +3,13 @@ div.games-container {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 }
+
+.details {
+    display: flex;
+}	
+
+
 
 .dev-title {
     /* background: linear-gradient(rgb(255, 255, 255, 0.1),rgb(0, 0, 0, 1)), url(../img/1f02774031aac19e2a0a32f5b291dcbe.jpg);
@@ -38,4 +43,35 @@ div.games-container {
     color: rgb(127, 127, 127);
     cursor: pointer;
     outline: none;
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+    .games-container .card{
+        width: 40%;
+        height: 120px;
+    }
+    .card .game-infos {
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 479px) and (max-width: 768px) {
+    .details {
+        display: flex;
+    }
+
+    .details h3{
+        font-weight: 500;
+        font-size: .6rem;
+    }
+
+    .details span{
+        font-size: .9rem;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 992px) {
+    .search-bar{
+        width: 80%;
+    }
 }

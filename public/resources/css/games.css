@@ -16,7 +16,6 @@ header {
 
 main{
     background-color: rgba(0, 0, 0, 0.6);
-    padding-bottom: 70px;
 }
 
 .front-game{
@@ -54,6 +53,7 @@ main{
 }
 
 .game-cover .cover-information .upper{
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -74,6 +74,7 @@ main{
 .game-cover .cover-information .down{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 10px;
     gap: 30px;
@@ -310,6 +311,7 @@ hr:after {
 .metacritic .individual-scores{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -422,3 +424,342 @@ hr:after {
     box-shadow: 0 20px 20px 0 rgb(0 0 0 / 15%);
 }
 
+
+@media (min-width: 0px) and (max-width: 480px){
+    .front-game {
+        background-size: auto 100vh;
+        height: 100vh;
+    }
+
+    .bg, .game-cover{
+        height: 100vh !important;
+    }
+
+    .game-cover {
+        margin-top: calc(70vh - 70px);
+        padding-left: 20px;
+    }
+
+    .game-cover .cover-information .upper h3 {
+        font-size: 14px !important;
+    }
+
+    .game-cover .cover-information .down, .game-cover .cover-information .upper {
+        width: 90%;
+    }
+
+    .game-cover .cover-information .down h3 {
+        font-size: 10px !important;
+    }
+
+    .container .description p {
+        font-size: .9rem;
+    }
+
+    .container .main-infos {
+        width: 90%;
+    }
+
+
+    .images {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .metacritic .metascore-info .metascore-score{
+        font-size: 1.5rem;
+        color: var(--gainsboro);
+        font-weight: 700;
+    }
+
+    .metacritic .metascore-info .metascore-title{
+        font-size: .9rem;
+    }
+
+    .metacritic .individual-scores {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 110px;
+    }
+
+    .metacritic .individual-scores .score, .metacritic .metascore-info {
+        width: 100px;
+        height: 100px;
+    }
+
+    .metacritic .individual-scores .score .score-score{
+        font-size: 1.2rem;
+    }
+
+    .metacritic .individual-scores .score .score-title{
+        font-size: .9rem;
+    }
+
+    .metacritic .individual-scores .vertical-line{
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        display: none;
+    }
+
+    .images .game-pic1:hover, .images .game-pic2:hover {
+        transform: scale(1);
+    }
+    .images .game-pic1, .images .game-pic2 {
+        width: 90%;
+        margin: 0;
+    }
+
+    .game-details {
+        width: 90%;
+    }
+    
+    .game-details-box {
+        min-height: auto;
+    }
+
+    .game-details-box .details{
+        gap: 20px;
+    }
+
+    .game-details h2{
+        font-size: 1.2rem;
+    }
+
+    .details h3{
+        font-size: .9rem;
+    }
+     
+    .swiper-wrapper{
+        max-width: 100%;
+    }
+
+}
+
+@media (min-width: 479px) and (max-width: 768px){
+    .front-game {
+        background-size: auto 100vh;
+        height: 100vh;
+    }
+
+    .bg, .game-cover{
+        height: 100vh !important;
+    }
+
+    .game-cover {
+        margin-top: calc(70vh - 70px);
+        padding-left: 20px;
+    }
+
+    .game-cover .cover-information .upper h3 {
+        font-size: 14px !important;
+    }
+
+    .game-cover .cover-information .down, .game-cover .cover-information .upper {
+        width: 90%;
+    }
+
+    .game-cover .cover-information .down h3 {
+        font-size: 10px !important;
+    }
+
+    .container .description p {
+        font-size: .9rem;
+    }
+
+    .container .main-infos {
+        width: 90%;
+    }
+
+
+    .images {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .metacritic .metascore-info .metascore-score{
+        font-size: 1.5rem;
+        color: var(--gainsboro);
+        font-weight: 700;
+    }
+
+    .metacritic .metascore-info .metascore-title{
+        font-size: .9rem;
+    }
+
+    .metacritic .individual-scores {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 110px;
+    }
+
+    .metacritic .individual-scores .score, .metacritic .metascore-info {
+        width: 100px;
+        height: 100px;
+    }
+
+    .metacritic .individual-scores .score .score-score{
+        font-size: 1.2rem;
+    }
+
+    .metacritic .individual-scores .score .score-title{
+        font-size: .9rem;
+    }
+
+    .metacritic .individual-scores .vertical-line{
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        display: none;
+    }
+
+    .images .game-pic1:hover, .images .game-pic2:hover {
+        transform: scale(1);
+    }
+    .images .game-pic1, .images .game-pic2 {
+        width: 90%;
+        margin: 0;
+    }
+
+    .game-details {
+        width: 90%;
+    }
+    
+    .game-details-box {
+        min-height: auto;
+    }
+
+    .game-details-box .details{
+        gap: 20px;
+    }
+
+    .game-details h2{
+        font-size: 1.2rem;
+    }
+
+    .details h3{
+        font-size: .9rem;
+    }
+     
+    .swiper-wrapper{
+        max-width: 100%;
+    }
+
+}
+
+@media (min-width: 767px) and (max-width: 992px){
+    .front-game {
+        background-size: auto 100vh;
+        height: 100vh;
+    }
+
+    .bg, .game-cover{
+        height: 100vh !important;
+    }
+
+    .game-cover {
+        margin-top: calc(70vh - 70px);
+        padding-left: 20px;
+    }
+
+    .game-cover .cover-information .upper h3 {
+        font-size: 14px !important;
+    }
+
+    .game-cover .cover-information .down, .game-cover .cover-information .upper {
+        width: 90%;
+    }
+
+    .game-cover .cover-information .down h3 {
+        font-size: 10px !important;
+    }
+
+    .container .description p {
+        font-size: .9rem;
+    }
+
+    .container .main-infos {
+        width: 90%;
+    }
+
+
+    .images {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .metacritic .metascore-info .metascore-score{
+        font-size: 1.5rem;
+        color: var(--gainsboro);
+        font-weight: 700;
+    }
+
+    .metacritic .metascore-info .metascore-title{
+        font-size: .9rem;
+    }
+
+    .metacritic .individual-scores {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 110px;
+    }
+
+    .metacritic .individual-scores .score, .metacritic .metascore-info {
+        width: 100px;
+        height: 100px;
+    }
+
+    .metacritic .individual-scores .score .score-score{
+        font-size: 1.2rem;
+    }
+
+    .metacritic .individual-scores .score .score-title{
+        font-size: .9rem;
+    }
+
+    .metacritic .individual-scores .vertical-line{
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        display: none;
+    }
+
+    .images .game-pic1:hover, .images .game-pic2:hover {
+        transform: scale(1);
+    }
+    .images .game-pic1, .images .game-pic2 {
+        width: 90%;
+        margin: 0;
+    }
+
+    .game-details {
+        width: 90%;
+    }
+    
+    .game-details-box {
+        min-height: auto;
+    }
+
+    .game-details-box .details{
+        gap: 20px;
+    }
+
+    .game-details h2{
+        font-size: 1.2rem;
+    }
+
+    .details h3{
+        font-size: .9rem;
+    }
+     
+    .swiper-wrapper{
+        max-width: 100%;
+    }
+
+}
