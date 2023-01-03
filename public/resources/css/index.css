@@ -27,6 +27,7 @@ body {
     padding-top: 70px; /* Altura do menu */
     background-color: var(--eerie-black);
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
 header{
