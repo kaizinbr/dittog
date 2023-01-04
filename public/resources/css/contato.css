@@ -39,11 +39,26 @@
     gap: 20px;
 }
 
-.btns a{
+.btns a, .btns a i{
     transition: all 0.3s ease;
 }
 
+.btns a{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
 .btns a:hover{
+    background-color: var(--op-eerie-black);
+    box-shadow: 20px 20px 100px rgba(28, 28, 28, 0.8);
+}
+
+.btns a:hover i{
     transform: scale(1.2);
 }
 
@@ -61,6 +76,10 @@
 
     .ctt-btns h1{
         font-size: 1.3rem;
+    }
+
+    .btns{
+        width: 100%;
     }
 }
 

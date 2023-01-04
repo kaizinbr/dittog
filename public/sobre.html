@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/index.css">
     <link rel="stylesheet" href="resources/css/menu.css">
-    <link rel="stylesheet" href="resources/css/contato.css">
+    <link rel="stylesheet" href="resources/css/sobre.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
@@ -50,47 +50,64 @@
 
     <main>
 
-        <div class="contato-box">
-            <div class="img-contato">
-                <img src="resources/img/Group 4 (4).svg" alt="">
-            </div>
-
-            <div class="ctt-btns">
-                <h1>Entre em contato:</h1> 
-                <div class="btns">
-                    <a href="https://www.instagram.com/kaio.mint/" target="_blank">
-                        <i class='bx bxl-instagram bx-lg'></i>
-                    </a>
-                    <a href="https://www.instagram.com/kaio.mint/" target="_blank">
-                        <i class='bx bxl-linkedin bx-lg'></i>
-                    </a>
-                    <a href="https://www.instagram.com/kaio.mint/" target="_blank">
-                        <i class='bx bx-envelope bx-lg'></i>
-                    </a>
+        <section class="abt-site">
+            <div class="row">
+                <figure>
+                    <img src="resources/img/desktop-example.png" alt="">
+                </figure>
+                <div class="abt-site-content">
+                    <h1>Sobre o DittoG</h1>
+                    <p>O DittoG é um site criado em Node.js para fins unicamente acadêmicos. O objetivo da criação do site foi mostrar o que foi aprendido durante o curso Técnico em Informática no IFPB-JP e servir de portfólio, já que pretendo seguir a área de desenvolvimento web no mercado de trabalho. O site foi criado utilizando apenas HTML, CSS, JavaScript, algumas bibliotecas externas e a RAWG API.</p>
                 </div>
             </div>
+                
+            <div class="row">
+                <div class="abt-site-content">
+                    <p>Além de HTML, CSS e Javascript, o corpo do website foi montado utilizando elementos gráficos criados no framework Figma e elementos da API SwiperJs, já que o foco foi desenvolver o design do Frontend. Para ícones, foram utilizadas as bibliotecas Google Fonts e Boxicons, que são gratuitas, manipuláveis e de fácil utilização. <br><br> Criado sobre Node.js utilizando o framework Express, a principal fonte do site é a RAWG API, uma API de jogos gratuita que contém informações sobre mais de 500.000 jogos, desenvolvedores, empresas e etc.</p>
+                </div>
+                <figure>
+                    <img id="frameworks" src="resources/img/frameworks.png" alt="">
+                </figure>
+            </div>
+                
+            <div class="row rvs">
+                <figure>
+                    <img src="resources/img/blur-example.png" alt="">
+                </figure>
+                <div class="abt-site-content">
+                    <p>Para desenvolver a <i>User Interface</i> do website, busquei manter uma paleta de cores limitada, sem muitos constrantes ou cores chamativas. Por isso, um traço menos marcante que decidi adicionar foi o <i>Blur</i>, que, a grosso modo, é dar transparência a elementos que sobrepõem outros e dar a eles um aspecto "borrado" ou "embaçado". Utilizando apenas CSS, foi possível adicionar isso em componentes como a barra superior de navegação, o <i>footer</i> (rodapé) e no plano de fundo das páginas dos jogos (o que é feito dinâmicamente com Javascript).</p>
+                </div>
+            </div>  
 
-            
-            <!-- <div class="contato-form">
-                <h1>Contato:</h1>
-                <form action="">
-                    <div class="input-box">
-                        <input type="text" id="name" placeholder="Nome" required>
-                    </div>
-                    <div class="input-box">
-                        <input type="email" id="email" placeholder="Email" required>
-                    </div>
-                    <div class="text">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem" required></textarea>
-                    </div>
-                    <div class="submit-btn">
-                        <button type="submit" value="Enviar">Enviar</button>
-                    </div>
-                </form>
-            </div> -->
-        </div>
-        
-        
+            <div class="row">
+                <div class="abt-site-content">
+                    <p>Embora o intuito inicial fosse focar nos formatos apenas para desktops (computadores tradicionais), decidi ajustar a responsividade para dispositivos mobile menores como celulares e tablets. Usando <i>media querys</i> no CSS, pude ajustar os formatos para os tamnhos de telas padrões como os com 320px, 425px e 768px de largura, e outros formatos e proporções como 16/9 e 18/9.</p>
+                </div>
+                <figure>
+                    <img id="fonts-colors" src="resources/img/mobile-example.png" alt="">
+                </figure>
+            </div>
+                
+            <div class="row rvs">
+                <figure>
+                    <img id="fonts-colors" src="resources/img/font-color-example.png" alt="">
+                </figure>
+                <div class="abt-site-content">
+                    <p>As cores definidas foram Eerie Black, Cultured e Steel Teal, e suas respectivas variações. Com quase todos os elementos definidos em tons de Eerie Black, o site se torna agradável aos olhos e permite uma leitura clara dos conteúdos. Também pensando na leitura, a fonte principal utilizada foi a fonte Poppins, disponibilizada gratuitamente no Google Fonts.</p>
+                </div>
+            </div>
+                
+            <div class="row">
+                <div class="abt-site-content">
+                    <p>Quanto à dinamicidade, quase todas as páginas têm algo que é adicionado ou alterado pelo Javascript, que, através de requisições HTTP, busca as informações na API RAWG e as adiciona ao HTML. Por ser um sistema simples e que depende de um servidor externo, algumas vezes pode ocorrer demora na adaptação do conteúdo, mas não é algo que não possa ser otimizado em algum momento. Pelo foco deste projeto ser a elaboração do Frontend, o maior foco ficou na estilização dos cards e elementos.</p>
+                </div>
+                <figure>
+                    <img src="resources/img/carbon.svg" alt="">
+                </figure>
+            </div>
+                
+        </section>
+
     </main>
 
     <footer>
